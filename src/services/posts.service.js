@@ -17,13 +17,11 @@ export default class PostService {
 
   getCommentsByPostId = async (postId) => {
     const res = await this.getResurce(`/posts/${postId}/comments`);
-    console.log("PostService -> getCommentsByPostId -> res", res)
     return res;
   }
 
   getPostById = async (postId) => {
     const res = await this.getResurce(`/posts/${postId}`);
-    console.log("PostService -> getPostById -> res", res)
     return res;
   }
 
