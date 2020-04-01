@@ -3,7 +3,7 @@ import './post.css';
 
 const Post = ({post}) => {
   
-  const { title, body } = post
+  const { title, body } = post;
   const postImg = ''
   return (
     <div className="post">
