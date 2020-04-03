@@ -3,12 +3,11 @@ import './comment.css';
 
 const Comment = ({comment}) => {
   
-  const { title, body } = comment;
-  const postImg = ''
+  const { title, body, id } = comment;
   return (
     <div className="comment">
       <div className="comment__img">
-        <img src={commentImg} alt="img"/>
+        <img src={`https://robohash.org/${id}?set=set4&size=100x100`} alt="img"/>
       </div>
       <div className="comment__content">
         <h1 className="comment__title">{title}</h1>

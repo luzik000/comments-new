@@ -12,7 +12,6 @@ export default class PostService {
 
   getAllPosts = async () => {
     const res = await this.getResurce('/posts?_start=3&_limit=5');
-    console.log("PostService -> getAllPosts -> res", res)
     return res;
   }
 
