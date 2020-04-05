@@ -26,4 +26,26 @@ export default class PostService {
     return res;
   }
 
+  async postResurce(url, data) {
+    const res = await fetch(`${this._apiUrl}${url}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    });
+    if (!res.ok) {
+      throw new Error(`ERRROR!!!!!!!!!!! ${url}, with ${res.status}`)
+    }
+    // const body = await res.json();
+    // return body;
+  }
+
+  
+  postNewComment = async (data) => {
+    await this.postResurce(`/comments`, data);
+    // return res;
+  }
+
+
 }

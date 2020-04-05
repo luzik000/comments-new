@@ -1,15 +1,20 @@
 import React, { Fragment, useState } from "react";
 
 import "./comment.css";
+
 import CommentContainer from "../comment-container/comment-container.component";
 import CommentAddForm from "../comment-add-form/comment-add-form";
 
 const Comment = ({ comment, subcomments, addNewComment }) => {
-  // let isOpenInputThis = false;
 
   const [isOpenInputThis, setIsOpenInputThis] = useState(false);
 
-  const { text, id, postId, commentId } = comment;
+  const { 
+    text, 
+    id, 
+    postId, 
+    commentId 
+  } = comment;
 
   const filteredComments = subcomments.filter(
     (comment) => comment.commentId === id

@@ -11,30 +11,24 @@ import ErrorIndicator from "../error-indicator/error-indicator";
 import {
   fetchPostsRequest,
   fetchPostsSuccess,
-  fetchPostsFailure
+  fetchPostsFailure,
 } from "../../redux/posts/posts.actions";
 
 const postService = new PostService();
 
 class PostsPage extends Component {
-  // state = {
-  //   posts: [],
-  //   loading: true,
-  //   error: false
-  // };
-
   componentDidMount() {
     const {
       fetchPostsRequest,
       fetchPostsSuccess,
-      fetchPostsFailure
+      fetchPostsFailure,
     } = this.props;
 
     fetchPostsRequest();
 
     postService
       .getAllPosts()
-      .then(data => fetchPostsSuccess(data))
+      .then((data) => fetchPostsSuccess(data))
       .catch(() => fetchPostsFailure());
   }
 
@@ -44,7 +38,7 @@ class PostsPage extends Component {
     const errorMessage = error ? <ErrorIndicator /> : null;
     const content = (
       <ul>
-        {posts.map(post => (
+        {posts.map((post) => (
           <li key={post.id}>
             <Link to={`post/${post.id}`}>
               <Post post={post} />
@@ -68,11 +62,11 @@ const mapStateToProps = ({ postsReducer }) => {
   return postsReducer;
 };
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return {
     fetchPostsRequest: () => dispatch(fetchPostsRequest()),
     fetchPostsSuccess: (posts) => dispatch(fetchPostsSuccess(posts)),
-    fetchPostsFailure: () => dispatch(fetchPostsFailure())
+    fetchPostsFailure: () => dispatch(fetchPostsFailure()),
   };
 };
 

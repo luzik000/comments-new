@@ -3,6 +3,9 @@ import { connect } from "react-redux";
 
 import Comment from "../comment/comment";
 import { addNewComment } from "../../redux/comments/comments.actions";
+import PostService from './../../services/posts.service';
+
+const postService = new PostService();
 
 const CommentContainer = ({
   comment,
@@ -21,18 +24,27 @@ const CommentContainer = ({
     };
   };
 
+  const addNewCommentToJSON = (text) => {
+    const newComment = generateNewComment(text);
+    postService.postNewComment(newComment)
+    
+
+    addNewComment(newComment);
+
+  }
+
   return (
     <Comment
       comment={comment}
       subcomments={subcomments}
-      addNewComment={(text) => addNewComment(generateNewComment(text))}
+      addNewComment={addNewCommentToJSON}
     />
   );
 };
 
 const mapStateToProps = ({
   inputFormReducer,
-  commentsReducer: { maxCommentId }
+  commentsReducer: { maxCommentId },
 }) => ({ inputFormReducer, maxCommentId });
 
 const mapDispatchToProps = (dispatch) => {

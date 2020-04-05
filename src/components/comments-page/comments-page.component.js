@@ -58,15 +58,12 @@ class CommentsPage extends Component {
       loadingPost,
       errorPost
     } = this.props;
-    
-    // console.log("CommentsPage -> render -> comments", comments)
 
     const spinner = loading && loadingPost ? <Spinner /> : null;
     const errorMessage = error || errorPost ? <ErrorIndicator /> : null;
     
     const filteredComments = comments.filter(comment => comment.commentId === null);
     const subcomments = comments.filter(comment => comment.commentId !== null);
-
 
     const content = (
       <Fragment>
