@@ -1,5 +1,6 @@
 export default class PostService {
-  _apiUrl = 'http://jsonplaceholder.typicode.com';
+  // _apiUrl = 'http://jsonplaceholder.typicode.com';
+  _apiUrl = 'http://localhost:3001';
 
   async getResurce(url) {
     const res = await fetch(`${this._apiUrl}${url}`);
@@ -11,7 +12,7 @@ export default class PostService {
   }
 
   getAllPosts = async () => {
-    const res = await this.getResurce('/posts?_start=3&_limit=5');
+    const res = await this.getResurce('/posts');
     return res;
   }
 

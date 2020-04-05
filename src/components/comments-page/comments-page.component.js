@@ -5,7 +5,7 @@ import "./comments-page.component.css";
 
 import PostService from "../../services/posts.service";
 import Post from "../post/post";
-import Comment from "../comment/comment";
+import CommentContainer from "../comment-container/comment-container.component";
 import Spinner from "./../spinner/spinner";
 import ErrorIndicator from "../error-indicator/error-indicator";
 
@@ -58,16 +58,23 @@ class CommentsPage extends Component {
       loadingPost,
       errorPost
     } = this.props;
+    
+    // console.log("CommentsPage -> render -> comments", comments)
 
     const spinner = loading && loadingPost ? <Spinner /> : null;
     const errorMessage = error || errorPost ? <ErrorIndicator /> : null;
+    
+    const filteredComments = comments.filter(comment => comment.commentId === null);
+    const subcomments = comments.filter(comment => comment.commentId !== null);
+
+
     const content = (
       <Fragment>
         <Post post={post} />
         <ul>
-          {comments.map(comment => (
+          {filteredComments.map(comment => (
             <li key={comment.id}>
-              <Comment comment={comment} />
+              <CommentContainer comment={comment} subcomments={subcomments}/>
             </li>
           ))}
         </ul>

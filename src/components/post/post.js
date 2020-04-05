@@ -3,7 +3,7 @@ import './post.css';
 
 const Post = ({post}) => {
   
-  const { title, body, id } = post;
+  const { title, text, id } = post;
   return (
     <div className="post">
       <div className="post__img">
@@ -11,8 +11,9 @@ const Post = ({post}) => {
       </div>
       <div className="post__content">
         <h1 className="post__title">{title}</h1>
+        <p className="post__text">post_id: {id}</p>
         <hr/>
-        <p className="post__text">{body}</p>
+        <p className="post__text">{text}</p>
       </div>
     </div>
   );
