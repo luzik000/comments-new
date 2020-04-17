@@ -2,13 +2,12 @@ import React from "react";
 
 import "./post.css";
 
-const Post = ({ post }) => {
-  const { title, text, id } = post;
+const Post = ({ post: {title, text, id} }) => {
+  // const { title, text, id } = post;
   return (
     <div className='post'>
       <div className='post__img'>
         <img
-          /* src={`https://robohash.org/${id}?set=set2&size=180x180`} */
           src="http://via.placeholder.com/300"
           alt='img'
         />

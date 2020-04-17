@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useEffect} from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import Tippy from "@tippyjs/react";
@@ -11,19 +11,15 @@ import Spinner from "./../spinner/spinner";
 import ErrorIndicator from "../error-indicator/error-indicator";
 import { fetchPosts } from "../../redux/posts/posts.actions";
 
-class PostsPage extends Component {
+const PostsPage = ({ posts, loading, error, fetchPosts }) => {
 
-  componentDidMount() {
-    const { fetchPosts } = this.props;
-
+  useEffect(() =>{
     fetchPosts();
-  }
+  }, [fetchPosts])
 
-  render() {
-    const { posts, loading, error } = this.props;
     const spinner = loading ? <Spinner /> : null;
     const errorMessage = error ? <ErrorIndicator /> : null;
-    const content = (
+    const allPosts = (
       <ul>
         {posts.map((post) => (
           <li key={post.id}>
@@ -41,10 +37,10 @@ class PostsPage extends Component {
       <div className='posts-page'>
         {spinner}
         {errorMessage}
-        {content}
+        {allPosts}
       </div>
     );
-  }
+  
 }
 
 const mapStateToProps = ({ postsReducer }) => {
