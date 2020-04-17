@@ -3,7 +3,6 @@ import React from "react";
 import "./post.css";
 
 const Post = ({ post: {title, text, id} }) => {
-  // const { title, text, id } = post;
   return (
     <div className='post'>
       <div className='post__img'>

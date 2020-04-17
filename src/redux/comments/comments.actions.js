@@ -65,8 +65,13 @@ export const addNewComment = (comment) => {
 }
 
 
-export const deleteComment = (commentId) => {
-  console.log('You try delete comment with ID: ', commentId)
+export const deleteComment = (commentId, comment) => {
+  console.log('You try delete comment with ID: ', commentId, comment)
+  const updComment = {
+    ...comment,
+    text: "DELETED"
+  }
+  postService.updateCurrentComment(commentId, updComment)
   return {
     type: commentsTypes.DELETE_COMMENT,
     payload: commentId

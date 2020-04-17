@@ -32,14 +32,6 @@ const Comment = ({ comment, subcomments, addNewComment, deleteComment }) => {
   return (
     <Fragment>
       <div className='comment'>
-{/*         <div className='comment__img'>
-          <img
-            src={`https://robohash.org/${
-              id.split("-")[1]
-            }?set=set4&size=100x100`}
-            alt='img'
-          />
-        </div> */}
         <div className='comment__content'>
           <h6 className='comment__title'>
             Comment ID: {commentId ? commentId : "NULL"} --- Post ID: {postId}{" "}

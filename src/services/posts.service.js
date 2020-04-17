@@ -48,4 +48,29 @@ export default class PostService {
   }
 
 
+  async updateResurce(url, data) {
+    const res = await fetch(`${this._apiUrl}${url}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+    .then(
+      response => response.json()
+    )
+    .then(data=> console.log(data))
+    .catch(err => console.log(err));
+  /*   if (!res.ok) {
+      throw new Error(`ERRROR!!!!!!!!!!! ${url}, with ${res.status}`)
+    }
+    const body = await res.json();
+    console.log(body);
+    return body; */
+  }
+
+
+  updateCurrentComment = async ( id, data ) => {
+    await this.updateResurce(`/comments/${id}`, data);
+  }
 }

@@ -38,7 +38,7 @@ const CommentContainer = ({
       comment={comment}
       subcomments={subcomments}
       addNewComment={addNewCommentToJSON}
-      deleteComment={() => deleteComment(id)}
+      deleteComment={() => deleteComment(id,comment)}
     />
   );
 };
@@ -51,7 +51,7 @@ const mapStateToProps = ({
 const mapDispatchToProps = (dispatch) => {
   return {
     addNewComment: (comment) => dispatch(addNewComment(comment)),
-    deleteComment: (commentId) => dispatch(deleteComment(commentId))
+    deleteComment: (commentId,comment) => dispatch(deleteComment(commentId,comment))
   };
 };
 
