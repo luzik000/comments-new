@@ -37,14 +37,14 @@ export default class PostService {
     if (!res.ok) {
       throw new Error(`ERRROR!!!!!!!!!!! ${url}, with ${res.status}`)
     }
-    // const body = await res.json();
-    // return body;
+    const body = await res.json();
+    return body;
   }
 
   
   postNewComment = async (data) => {
-    await this.postResurce(`/comments`, data);
-    // return res;
+    const res = await this.postResurce('/comments', data);
+    return res;
   }
 
 

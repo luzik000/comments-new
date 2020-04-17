@@ -2,23 +2,23 @@
   padding: 2rem;
   margin: 2rem;
   box-sizing: border-box;
-  box-shadow: 12px 12px 25px rgba(0, 0, 0, 0.199);
+  box-shadow: 0 1px 2px 1px rgba(0,0,0,0.05), 0 3px 7px 1px rgba(0,0,0,0.07), 0 5px 10px 3px rgba(0,0,0,0.07);
   border-radius: 10px;
   display: flex;
   justify-content: center;
   background-color: rgba(252, 252, 252, 0.158);
- 
 }
 
 .post__img{
   width: 30%;
+  padding: 1rem;
 }
 .post__img img {
   max-width: 100%;
 }
 
 .post__content{
-  padding: 2rem;
+  padding: 1rem;
   width: 70%;
   display: flex;
   flex-direction: column;
@@ -34,10 +34,13 @@
 
 .post__title{
   font-size: 1.5rem;
-  
-  color: blue;
+  margin-top: -10px;
+  color: #DF691A;
 }
 
 .post__text{
   font-size: 1rem;
+  color: rgb(238, 109, 23);
+  transition: all .7s;
+
 }

@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Tippy from "@tippyjs/react";
+
 
 import "./comment-add-form.css";
 
@@ -17,12 +19,15 @@ const CommentAddForm = ({ onCommentAdded }) => {
         type='text'
         className='form-control'
         onChange={(e) => setLabel(e.target.value)}
-        placeholder='What needs to comment'
+        placeholder='Печатайте сюда пожалуйста'
         value={label}
       />
-      <button type='submit' className='btn btn-outline-secondary'>
-        Add
-      </button>
+      <Tippy content="Отправить"
+        delay={1000}>
+        <button type='submit' className='btn btn-outline-primary'>
+          Add
+        </button>
+      </Tippy>
     </form>
   );
 };

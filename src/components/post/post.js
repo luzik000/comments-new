@@ -8,7 +8,8 @@ const Post = ({ post }) => {
     <div className='post'>
       <div className='post__img'>
         <img
-          src={`https://robohash.org/${id}?set=set2&size=180x180`}
+          /* src={`https://robohash.org/${id}?set=set2&size=180x180`} */
+          src="http://via.placeholder.com/300"
           alt='img'
         />
       </div>

@@ -1,46 +1,74 @@
 import { commentsTypes } from './comments.types';
+import PostService from '../../services/posts.service';
 
-export const fetchCommentsRequest = () => {
+const postService = new PostService();
+
+const fetchCommentsRequest = () => {
   return {
     type: commentsTypes.FETCH_COMMENTS_REQUEST
   }
 }
 
-export const fetchCommentsSuccess = (comments) => {
+const fetchCommentsSuccess = (comments) => {
   return {
     type: commentsTypes.FETCH_COMMENTS_SUCCESS,
     payload: comments
   }
 }
 
-export const fetchCommentsFailure = () => {
+const fetchCommentsFailure = () => {
   return {
     type: commentsTypes.FETCH_COMMENTS_FAILURE
   }
 }
 
-export const fetchPostItemRequest = () => {
+export const fetchComments = (postId) => (dispatch) => {
+  dispatch(fetchCommentsRequest());
+
+  postService.getCommentsByPostId(postId)
+    .then((data) => dispatch(fetchCommentsSuccess(data)))
+    .catch(() => dispatch(fetchCommentsFailure()))
+}
+
+const fetchPostItemRequest = () => {
   return {
     type: commentsTypes.FETCH_POST_ITEM_REQUEST
   }
 }
 
-export const fetchPostItemSuccess = (post) => {
+const fetchPostItemSuccess = (post) => {
   return {
     type: commentsTypes.FETCH_POST_ITEM_SUCCESS,
     payload: post
   }
 }
 
-export const fetchPostItemFailure = () => {
+const fetchPostItemFailure = () => {
   return {
     type: commentsTypes.FETCH_POST_ITEM_FAILURE
   }
+}
+
+export const fetchPostItem = (postId) => (dispatch) => {
+  dispatch(fetchPostItemRequest());
+  
+  postService.getPostById(postId)
+    .then((data) => dispatch(fetchPostItemSuccess(data)))
+    .catch(() => dispatch(fetchPostItemFailure()))
 }
 
 export const addNewComment = (comment) => {
   return {
     type: commentsTypes.ADD_NEW_COMMENT,
     payload: comment
+  }
+}
+
+
+export const deleteComment = (commentId) => {
+  console.log('You try delete comment with ID: ', commentId)
+  return {
+    type: commentsTypes.DELETE_COMMENT,
+    payload: commentId
   }
 }

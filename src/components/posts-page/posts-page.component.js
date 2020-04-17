@@ -1,35 +1,22 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
+import Tippy from "@tippyjs/react";
+
 
 import "./posts-page.component.css";
 
-import PostService from "../../services/posts.service";
 import Post from "../post/post";
 import Spinner from "./../spinner/spinner";
 import ErrorIndicator from "../error-indicator/error-indicator";
-import {
-  fetchPostsRequest,
-  fetchPostsSuccess,
-  fetchPostsFailure,
-} from "../../redux/posts/posts.actions";
-
-const postService = new PostService();
+import { fetchPosts } from "../../redux/posts/posts.actions";
 
 class PostsPage extends Component {
+
   componentDidMount() {
-    const {
-      fetchPostsRequest,
-      fetchPostsSuccess,
-      fetchPostsFailure,
-    } = this.props;
+    const { fetchPosts } = this.props;
 
-    fetchPostsRequest();
-
-    postService
-      .getAllPosts()
-      .then((data) => fetchPostsSuccess(data))
-      .catch(() => fetchPostsFailure());
+    fetchPosts();
   }
 
   render() {
@@ -40,9 +27,11 @@ class PostsPage extends Component {
       <ul>
         {posts.map((post) => (
           <li key={post.id}>
-            <Link to={`post/${post.id}`}>
-              <Post post={post} />
-            </Link>
+            <Tippy content="Открыть" placement="right" delay={1300}>
+              <Link to={`post/${post.id}`}>
+                <Post post={post} />
+              </Link>
+            </Tippy>
           </li>
         ))}
       </ul>
@@ -64,9 +53,7 @@ const mapStateToProps = ({ postsReducer }) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchPostsRequest: () => dispatch(fetchPostsRequest()),
-    fetchPostsSuccess: (posts) => dispatch(fetchPostsSuccess(posts)),
-    fetchPostsFailure: () => dispatch(fetchPostsFailure()),
+    fetchPosts: (posts) => dispatch(fetchPosts(posts))
   };
 };
 

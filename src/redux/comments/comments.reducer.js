@@ -62,19 +62,35 @@ const commentsReducer = (state = initialState, action) => {
       };
 
     case commentsTypes.ADD_NEW_COMMENT:
-      // console.log("commentsReducer -> state.comments", state.comments)
-      // console.log("commentsReducer -> action.payload", action.payload)
-      // console.log("commentsReducer -> [...state.comments, action.payload]", [...state.comments, action.payload])
-      
       return {
         ...state,
         comments: [...state.comments, action.payload],
         maxCommentId: state.maxCommentId + 1,
       };
 
+    case commentsTypes.DELETE_COMMENT:
+      return {
+        ...state,
+        comments: updateComments(state.comments, action.payload)
+      };
+
     default:
       return state;
   }
 };
+
+const updateComments = (comments, commentId = null) => {
+  const commentIndex = comments.findIndex((comment) => comment.id === commentId);
+  const currentComment = comments.find((comment) => comment.id === commentId)
+  const updatedComment = {
+    ...currentComment,
+    text: "DELETED"
+  }
+  return [
+    ...comments.slice(0, commentIndex), 
+    updatedComment,
+    ...comments.slice(commentIndex+1, comments.length)
+  ]
+}
 
 export default commentsReducer;

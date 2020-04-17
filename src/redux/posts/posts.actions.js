@@ -1,22 +1,33 @@
 import { postsTypes } from "./posts.types";
+import PostService from './../../services/posts.service';
 
-export const fetchPostsRequest = () => {
+const fetchPostsRequest = () => {
   return {
     type: postsTypes.FETCH_POSTS_REQUEST
   }
 }
 
-export const fetchPostsSuccess = (posts) => {
+const fetchPostsSuccess = (posts) => {
   return {
     type: postsTypes.FETCH_POSTS_SUCCESS,
     payload: posts
   }
 }
 
-export const fetchPostsFailure = () => {
+const fetchPostsFailure = () => {
   return {
     type: postsTypes.FETCH_POSTS_FAILURE
   }
+}
+
+const postService = new PostService();
+
+export const fetchPosts = () => (dispatch) => {
+  dispatch(fetchPostsRequest());
+
+  postService.getAllPosts()
+    .then((data) => dispatch(fetchPostsSuccess(data)))
+    .catch(() => dispatch(fetchPostsFailure()));
 }
 
 

@@ -3,22 +3,15 @@ import { connect } from "react-redux";
 
 import "./comments-page.component.css";
 
-import PostService from "../../services/posts.service";
 import Post from "../post/post";
 import CommentContainer from "../comment-container/comment-container.component";
 import Spinner from "./../spinner/spinner";
 import ErrorIndicator from "../error-indicator/error-indicator";
 
 import {
-  fetchCommentsRequest,
-  fetchCommentsSuccess,
-  fetchCommentsFailure,
-  fetchPostItemRequest,
-  fetchPostItemSuccess,
-  fetchPostItemFailure
+  fetchComments,
+  fetchPostItem
 } from "../../redux/comments/comments.actions";
-
-const postService = new PostService();
 
 class CommentsPage extends Component {
 
@@ -26,26 +19,12 @@ class CommentsPage extends Component {
 
     const { postId } = this.props.match.params;
     const {
-      fetchCommentsRequest,
-      fetchCommentsSuccess,
-      fetchCommentsFailure,
-      fetchPostItemRequest,
-      fetchPostItemSuccess,
-      fetchPostItemFailure
+      fetchComments,
+      fetchPostItem
     } = this.props;
 
-    fetchPostItemRequest();
-    fetchCommentsRequest();
-
-    postService
-      .getPostById(postId)
-      .then(data => fetchPostItemSuccess(data))
-      .catch(() => fetchPostItemFailure());
-
-    postService
-      .getCommentsByPostId(postId)
-      .then(data => fetchCommentsSuccess(data))
-      .catch(() => fetchCommentsFailure());
+    fetchPostItem(postId);
+    fetchComments(postId);
   }
 
   render() {
@@ -92,12 +71,8 @@ const mapStateToProps = ({commentsReducer}) => (commentsReducer);
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchCommentsRequest: () => dispatch(fetchCommentsRequest()),
-    fetchCommentsSuccess: comments => dispatch(fetchCommentsSuccess(comments)),
-    fetchCommentsFailure: () => dispatch(fetchCommentsFailure()),
-    fetchPostItemRequest: () => dispatch(fetchPostItemRequest()),
-    fetchPostItemSuccess: post => dispatch(fetchPostItemSuccess(post)),
-    fetchPostItemFailure: () => dispatch(fetchPostItemFailure())
+    fetchComments: (comments) => dispatch(fetchComments(comments)),
+    fetchPostItem: (post) => dispatch(fetchPostItem(post))
   };
 };
 

@@ -5,7 +5,7 @@ import './header.styles.css';
 
 const Header = () => {
   return (
-    <Link to="/">
+    <Link to="/" className="header-link">
       <div className="header d-flex bg-primary badge-dark">
         <h1>Comments Tree</h1>
       </div>

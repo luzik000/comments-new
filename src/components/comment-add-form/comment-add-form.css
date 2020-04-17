@@ -1,8 +1,5 @@
-.comment-add-form{
-  margin-top: 3px;
-  margin-bottom: 13px;
-}
-
-.comment-add-form input {
-  margin-right: 3px;
+.form-control{
+  margin: 0.5rem;
+  min-height: 3rem;
+  border-radius: 10px;
 }

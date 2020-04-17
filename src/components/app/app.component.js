@@ -12,10 +12,12 @@ const App = () => {
     <Router>
       <div className='app'>
         <Header />
-        <Switch>
-          <Route path='/' component={PostsPage} exact />
-          <Route path='/post/:postId' component={CommentsPage} exact />
-        </Switch>
+        <div className="container">
+          <Switch>
+            <Route path='/' component={PostsPage} exact />
+            <Route path='/post/:postId' component={CommentsPage} exact />
+          </Switch>
+        </div>
       </div>
     </Router>
   );
