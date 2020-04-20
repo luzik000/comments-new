@@ -1,5 +1,4 @@
 export default class PostService {
-  // _apiUrl = 'http://jsonplaceholder.typicode.com';
   _apiUrl = 'http://localhost:3001';
 
   async getResurce(url) {
@@ -23,6 +22,11 @@ export default class PostService {
 
   getPostById = async (postId) => {
     const res = await this.getResurce(`/posts/${postId}`);
+    return res;
+  }
+
+  getCommentById = async (commentId) => {
+    const res = await this.getResurce(`/comments/${commentId}`);
     return res;
   }
 
@@ -56,21 +60,15 @@ export default class PostService {
       },
       body: JSON.stringify(data)
     })
-    .then(
-      response => response.json()
-    )
-    .then(data=> console.log(data))
-    .catch(err => console.log(err));
-  /*   if (!res.ok) {
+    if (!res.ok) {
       throw new Error(`ERRROR!!!!!!!!!!! ${url}, with ${res.status}`)
     }
     const body = await res.json();
-    console.log(body);
-    return body; */
+    return body;
   }
 
 
-  updateCurrentComment = async ( id, data ) => {
-    await this.updateResurce(`/comments/${id}`, data);
+  updateComment = async (data) => {
+    await this.updateResurce(`/comments/${data.id}`, data);
   }
 }

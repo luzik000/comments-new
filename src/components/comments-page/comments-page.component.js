@@ -44,7 +44,7 @@ class CommentsPage extends Component {
     const filteredComments = comments.filter(comment => comment.commentId === null);
     const subcomments = comments.filter(comment => comment.commentId !== null);
 
-    const content = (
+    const content = !spinner && ! errorMessage ? (
       <Fragment>
         <Post post={post} />
         <ul>
@@ -55,7 +55,7 @@ class CommentsPage extends Component {
           ))}
         </ul>
       </Fragment>
-    );
+    ) : null;
 
     return (
       <div className='comments-page'>

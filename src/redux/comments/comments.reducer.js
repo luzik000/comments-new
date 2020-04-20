@@ -84,7 +84,7 @@ const updateComments = (comments, commentId = null) => {
   const currentComment = comments.find((comment) => comment.id === commentId)
   const updatedComment = {
     ...currentComment,
-    text: "DELETED"
+    deleted: true
   }
   return [
     ...comments.slice(0, commentIndex), 

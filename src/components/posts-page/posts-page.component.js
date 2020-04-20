@@ -19,7 +19,7 @@ const PostsPage = ({ posts, loading, error, fetchPosts }) => {
 
     const spinner = loading ? <Spinner /> : null;
     const errorMessage = error ? <ErrorIndicator /> : null;
-    const allPosts = (
+    const allPosts = !loading && !error ? (
       <ul>
         {posts.map((post) => (
           <li key={post.id}>
@@ -31,7 +31,7 @@ const PostsPage = ({ posts, loading, error, fetchPosts }) => {
           </li>
         ))}
       </ul>
-    );
+    ) : null;
 
     return (
       <div className='posts-page'>

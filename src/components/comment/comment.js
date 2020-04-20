@@ -11,7 +11,7 @@ import CommentAddForm from "../comment-add-form/comment-add-form";
 const Comment = ({ comment, subcomments, addNewComment, deleteComment }) => {
   const [isOpenInputThis, setIsOpenInputThis] = useState(false);
 
-  const { text, id, postId, commentId } = comment;
+  const { text, id, postId, commentId, deleted } = comment;
 
   const filteredComments = subcomments.filter(
     (comment) => comment.commentId === id
@@ -38,7 +38,7 @@ const Comment = ({ comment, subcomments, addNewComment, deleteComment }) => {
             --- This ID: {id}
           </h6>
           <hr />
-          <p className='comment__text'>{text}</p>
+          <p className='comment__text'>{deleted ? "DELETED" : text}</p>
           <div className="comment__btn-block">
             <Tippy 
             content={ 
@@ -63,9 +63,10 @@ const Comment = ({ comment, subcomments, addNewComment, deleteComment }) => {
               content="Удалить комментарий"
               delay={800}>
               <button 
+                disabled={deleted}
                 className='btn btn-danger' 
                 onClick={() => {
-                  deleteComment();
+                  deleteComment(id);
                   setIsOpenInputThis(false)
                   }}>
                 <i className='fa fa-times-circle'></i>

@@ -33,160 +33,165 @@
   ],
   "comments": [
     {
+      "id": "1-1",
       "postId": 1,
       "commentId": null,
       "text": "est natus enim nihil est dolore omnis voluptatem numquam\net omnis occaecati quod ullam ",
-      "id": "1-1"
+      "deleted": false
     },
     {
+      "id": "1-2",
       "postId": 1,
       "commentId": null,
       "text": "est natus enim nihil est dolore omnis voluptatem numquam\net omnis occaecati quod ullam ",
-      "id": "1-2"
+      "deleted": false
     },
     {
       "id": "1-3",
       "postId": 1,
       "commentId": "1-1",
-      "text": "quia molestiae reprehenderit quasi aspernatur\naut expedita occaecati aliquam eveniet laudantium\nomnis quibusdam delectus saepe quia accusamus maiores nam est\ncum et ducimus et vero voluptates excepturi deleniti ratione"
+      "text": "quia molestiae reprehenderit quasi aspernatur\naut expedita occaecati aliquam eveniet laudantium\nomnis quibusdam delectus saepe quia accusamus maiores nam est\ncum et ducimus et vero voluptates excepturi deleniti ratione",
+      "deleted": false
     },
     {
       "id": "1-4",
       "postId": 1,
       "commentId": "1-1",
-      "text": "non et atque\noccaecati deserunt quas accusantium unde odit nobis qui voluptatem\nquia voluptas consequuntur itaque dolor\net qui rerum deleniti ut occaecati"
+      "text": "non et atque\noccaecati deserunt quas accusantium unde odit nobis qui voluptatem\nquia voluptas consequuntur itaque dolor\net qui rerum deleniti ut occaecati",
+      "deleted": false
     },
     {
       "id": "1-5",
       "postId": 1,
       "commentId": "1-4",
-      "text": "harum non quasi et ratione\ntempore iure ex voluptates in ratione\nharum architecto fugit inventore cupiditate\nvoluptates magni quo et"
+      "text": "harum non quasi et ratione\ntempore iure ex voluptates in ratione\nharum architecto fugit inventore cupiditate\nvoluptates magni quo et",
+      "deleted": false
     },
     {
       "id": "2-1",
       "postId": 2,
       "commentId": null,
-      "text": "doloribus at sed quis culpa deserunt consectetur qui praesentium\naccusamus fugiat dicta\nvoluptatem rerum ut voluptate autem\nvoluptatem repellendus aspernatur dolorem in"
+      "text": "doloribus at sed quis culpa deserunt consectetur qui praesentium\naccusamus fugiat dicta\nvoluptatem rerum ut voluptate autem\nvoluptatem repellendus aspernatur dolorem in",
+      "deleted": false
     },
     {
       "id": "2-2",
       "postId": 2,
       "commentId": null,
-      "text": "maiores sed dolores similique labore et inventore et\nquasi temporibus esse sunt id et\neos voluptatem aliquam\naliquid ratione corporis molestiae mollitia quia et magnam dolor"
+      "text": "maiores sed dolores similique labore et inventore et\nquasi temporibus esse sunt id et\neos voluptatem aliquam\naliquid ratione corporis molestiae mollitia quia et magnam dolor",
+      "deleted": false
     },
     {
       "id": "2-3",
       "postId": 2,
       "commentId": "2-1",
-      "text": "ut voluptatem corrupti velit\nad voluptatem maiores\net nisi velit vero accusamus maiores\nvoluptates quia aliquid ullam eaque"
+      "text": "ut voluptatem corrupti velit\nad voluptatem maiores\net nisi velit vero accusamus maiores\nvoluptates quia aliquid ullam eaque",
+      "deleted": false
     },
     {
       "id": "2-4",
       "postId": 2,
       "commentId": null,
-      "text": "sapiente assumenda molestiae atque\nadipisci laborum distinctio aperiam et ab ut omnis\net occaecati aspernatur odit sit rem expedita\nquas enim ipsam minus"
+      "text": "sapiente assumenda molestiae atque\nadipisci laborum distinctio aperiam et ab ut omnis\net occaecati aspernatur odit sit rem expedita\nquas enim ipsam minus",
+      "deleted": false
     },
     {
       "id": "2-5",
       "postId": 2,
       "commentId": null,
-      "text": "voluptate iusto quis nobis reprehenderit ipsum amet nulla\nquia quas dolores velit et non\naut quia necessitatibus\nnostrum quaerat nulla et accusamus nisi facilis"
+      "text": "voluptate iusto quis nobis reprehenderit ipsum amet nulla\nquia quas dolores velit et non\naut quia necessitatibus\nnostrum quaerat nulla et accusamus nisi facilis",
+      "deleted": false
     },
     {
       "id": "1",
       "postId": 3,
       "commentId": null,
-      "text": "ut dolorum nostrum id quia aut est\nfuga est inventore vel eligendi explicabo quis consectetur\naut occaecati repellat id natus quo est\nut blanditiis quia ut vel ut maiores ea"
+      "text": "ut dolorum nostrum id quia aut est\nfuga est inventore vel eligendi explicabo quis consectetur\naut occaecati repellat id natus quo est\nut blanditiis quia ut vel ut maiores ea",
+      "deleted": true
     },
     {
       "id": "3-2",
       "postId": 3,
       "commentId": null,
-      "text": "expedita maiores dignissimos facilis\nipsum est rem est fugit velit sequi\neum odio dolores dolor totam\noccaecati ratione eius rem velit"
+      "text": "expedita maiores dignissimos facilis\nipsum est rem est fugit velit sequi\neum odio dolores dolor totam\noccaecati ratione eius rem velit",
+      "deleted": true
     },
     {
       "id": "3-3",
       "postId": 3,
       "commentId": null,
-      "text": "fuga eos qui dolor rerum\ninventore corporis exercitationem\ncorporis cupiditate et deserunt recusandae est sed quis culpa\neum maiores corporis et"
+      "text": "fuga eos qui dolor rerum\ninventore corporis exercitationem\ncorporis cupiditate et deserunt recusandae est sed quis culpa\neum maiores corporis et",
+      "deleted": true
     },
     {
       "id": "3-4",
       "postId": 3,
       "commentId": null,
-      "text": "vel quae voluptas qui exercitationem\nvoluptatibus unde sed\nminima et qui ipsam aspernatur\nexpedita magnam laudantium et et quaerat ut qui dolorum"
+      "text": "vel quae voluptas qui exercitationem\nvoluptatibus unde sed\nminima et qui ipsam aspernatur\nexpedita magnam laudantium et et quaerat ut qui dolorum",
+      "deleted": true
     },
     {
       "id": "3-5",
       "postId": 3,
       "commentId": null,
-      "text": "nihil ut voluptates blanditiis autem odio dicta rerum\nquisquam saepe et est\nsunt quasi nemo laudantium deserunt\nmolestias tempora quo quia"
+      "text": "nihil ut voluptates blanditiis autem odio dicta rerum\nquisquam saepe et est\nsunt quasi nemo laudantium deserunt\nmolestias tempora quo quia",
+      "deleted": true
     },
     {
       "id": "4-1",
       "postId": 4,
       "commentId": null,
-      "text": "iste ut laborum aliquid velit facere itaque\nquo ut soluta dicta voluptate\nerror tempore aut et\nsequi reiciendis dignissimos expedita consequuntur libero sed fugiat facilis"
+      "text": "iste ut laborum aliquid velit facere itaque\nquo ut soluta dicta voluptate\nerror tempore aut et\nsequi reiciendis dignissimos expedita consequuntur libero sed fugiat facilis",
+      "deleted": false
     },
     {
       "id": "4-2",
       "postId": 4,
       "commentId": null,
-      "text": "consequatur necessitatibus totam sed sit dolorum\nrecusandae quae odio excepturi voluptatum harum voluptas\nquisquam sit ad eveniet delectus\ndoloribus odio qui non labore"
+      "text": "consequatur necessitatibus totam sed sit dolorum\nrecusandae quae odio excepturi voluptatum harum voluptas\nquisquam sit ad eveniet delectus\ndoloribus odio qui non labore",
+      "deleted": false
     },
     {
       "id": "4-3",
       "postId": 4,
       "commentId": null,
-      "text": "veritatis voluptates necessitatibus maiores corrupti\nneque et exercitationem amet sit et\nullam velit sit magnam laborum\nmagni ut molestias"
+      "text": "veritatis voluptates necessitatibus maiores corrupti\nneque et exercitationem amet sit et\nullam velit sit magnam laborum\nmagni ut molestias",
+      "deleted": false
     },
     {
       "id": "4-4",
       "postId": 4,
       "commentId": null,
-      "text": "doloribus est illo sed minima aperiam\nut dignissimos accusantium tempore atque et aut molestiae\nmagni ut accusamus voluptatem quos ut voluptates\nquisquam porro sed architecto ut"
+      "text": "doloribus est illo sed minima aperiam\nut dignissimos accusantium tempore atque et aut molestiae\nmagni ut accusamus voluptatem quos ut voluptates\nquisquam porro sed architecto ut",
+      "deleted": false
     },
     {
       "id": "4-5",
       "postId": 4,
       "commentId": null,
-      "text": "qui harum consequatur fugiat\net eligendi perferendis at molestiae commodi ducimus\ndoloremque asperiores numquam qui\nut sit dignissimos reprehenderit tempore"
+      "text": "qui harum consequatur fugiat\net eligendi perferendis at molestiae commodi ducimus\ndoloremque asperiores numquam qui\nut sit dignissimos reprehenderit tempore",
+      "deleted": false
     },
     {
       "id": "5-1",
       "postId": 5,
       "commentId": null,
-      "text": "deleniti aut sed molestias explicabo\ncommodi odio ratione nesciunt\nvoluptate doloremque est\nnam autem error delectus"
+      "text": "deleniti aut sed molestias explicabo\ncommodi odio ratione nesciunt\nvoluptate doloremque est\nnam autem error delectus",
+      "deleted": true
     },
     {
       "id": "5-2",
       "postId": 5,
       "commentId": null,
-      "text": "qui ipsa animi nostrum praesentium voluptatibus odit\nqui non impedit cum qui nostrum aliquid fuga explicabo\nvoluptatem fugit earum voluptas exercitationem temporibus dignissimos distinctio\nesse inventore reprehenderit quidem ut incidunt nihil necessitatibus rerum"
+      "text": "qui ipsa animi nostrum praesentium voluptatibus odit\nqui non impedit cum qui nostrum aliquid fuga explicabo\nvoluptatem fugit earum voluptas exercitationem temporibus dignissimos distinctio\nesse inventore reprehenderit quidem ut incidunt nihil necessitatibus rerum",
+      "deleted": true
     },
     {
       "id": "5-3",
       "postId": 5,
       "commentId": null,
-      "text": "voluptates provident repellendus iusto perspiciatis ex fugiat ut\nut dolor nam aliquid et expedita voluptate\nsunt vitae illo rerum in quos\nvel eligendi enim quae fugiat est"
-    },
-    {
-      "id": "5-4",
-      "postId": 5,
-      "commentId": "5-3",
-      "text": "DELETED"
-    },
-    {
-      "id": "5-5",
-      "postId": 5,
-      "commentId": "5-3",
-      "text": "DELETED"
-    },
-    {
-      "id": "5-6",
-      "postId": 5,
-      "commentId": "5-5",
-      "text": "DELETED"
+      "text": "voluptates provident repellendus iusto perspiciatis ex fugiat ut\nut dolor nam aliquid et expedita voluptate\nsunt vitae illo rerum in quos\nvel eligendi enim quae fugiat est",
+      "deleted": true
     }
   ]
 }
