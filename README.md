@@ -1,3 +1,8 @@
+NOTIFICATION:
+Run JSON server with:
+## `json-server resources/posts.json -p 3001 -w`
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
